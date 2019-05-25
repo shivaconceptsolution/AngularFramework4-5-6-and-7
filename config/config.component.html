@@ -1,0 +1,63 @@
+
+
+
+<!--<h1>Config</h1>
+ <ul>
+      <li *ngFor="let location of locations" >
+        -- id: {{location.id}}
+        -- dust_no: {{location.uname}}
+        
+      </li>
+    </ul>   -->
+
+<div class="container">
+  <h1>Truck Form</h1>
+  <form name="frm" id="frm">
+
+    <label for="name">Truck ID</label>
+    <input type="text" class="form-control" [(ngModel)]="tid" name="tid" required />
+    <div *ngIf="frm.tid.errors.required">
+      username is required
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Truck Desc</label>
+      <input type="text" class="form-control" [(ngModel)]="tdesc" name="tdesc">
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="addTruck()">Submit</button>
+
+  </form>
+  <!----
+  <div class="container">
+    <app-heroes></app-heroes>
+    <button (click)="showAlert()">CLICK</button>
+    <h2>Angular Template Driven Form Validation</h2>
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      <div class="form-group">
+        <input id="name" name="name" class="form-control"
+               required minlength="2" appForbiddenName="bob"
+               [(ngModel)]="tid" #name1="ngModel">
+      </div>
+      <div class="form-group">
+        <div *ngIf="name1.invalid && (name1.dirty || name1.touched)"
+            class="alert alert-danger">
+          <div *ngIf="name1.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name1.errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+          <div *ngIf="name1.errors.forbiddenName">
+            Name cannot be Bob.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" [disabled]="f.form.pristine || f.form.invalid">Add Name</button>
+      </div>
+    </form>
+  </div>-->
+
+</div>
+
